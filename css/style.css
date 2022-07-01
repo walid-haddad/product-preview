@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Titillium+Web:wght@200");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300");
+
+
+:root { 
+    --light-gray: hsl(52, 3%, 54%);
+    --dark-green: hsl(157, 29%, 38%);
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    width: 95%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.image {
+    width: 100%;
+    
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 200px;
+    background: url("../images/image-product-mobile.jpg") ;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.image h2 {
+    visibility: hidden;
+}
+.t-upper {
+    text-transform: uppercase;
+}
+.t-font {
+    color: var(--light-gray);
+    font-family: "Titillium Web";
+    letter-spacing: 3px;
+    font-size: medium;
+}
+.prices{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 50px;
+    font-size: 30px;
+
+}
+.price {
+    
+    color: var(--dark-green);
+}
+.prev-price {
+    font-size: small;
+    text-decoration: line-through;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.content h1 {
+    font-weight: 900;
+    font-family: "Merriweather";
+}
+.content p {
+    color: var(--light-gray);
+    font-size: 20px;
+}
+.cart-button {
+    
+    display:flex;
+    background-color: var(--dark-green);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    justify-content: center;
+}
+.add-cart {
+    
+    text-align: center;
+    color:white;
+    font-weight: 600;
+    
+}
+.cart-button img {
+    margin-right: 10px;
+}
+.change-default {
+    text-decoration: none;
+}
