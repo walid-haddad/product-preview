@@ -5,10 +5,15 @@
 :root { 
     --light-gray: hsl(52, 3%, 54%);
     --dark-green: hsl(157, 29%, 38%);
+    --light-background: hsl(26, 38%, 91%);
 }
 
+body {
+    
+    background: var(--light-background);
+}
 .container {
-    max-width: 400px;
+    max-width: 1000px;
     margin: 0 auto;
     width: 95%;
     height: 100vh;
@@ -23,19 +28,34 @@
     align-items: center;
 }
 
-.image {
+.component {
+    max-width: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 1rem;
+    border-radius: 10px;
+    background: white;
+    position: relative;
+}
+
+ .image {
     width: 100%;
-    
+    background: url("../images/image-product-mobile.jpg") ;
+    background-position: center;
+    background-size: cover;
     -o-object-fit: cover;
     object-fit: cover;
     height: 200px;
-    background: url("../images/image-product-mobile.jpg") ;
+    
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.image h2 {
-    visibility: hidden;
-}
+
 .t-upper {
     text-transform: uppercase;
 }
@@ -49,13 +69,16 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 50px;
+    margin-top: 30px;
     font-size: 30px;
 
 }
 .price {
     
     color: var(--dark-green);
+}
+.content {
+    margin-left: 20px;
 }
 .prev-price {
     font-size: small;
@@ -66,6 +89,7 @@
 .content h1 {
     font-weight: 900;
     font-family: "Merriweather";
+    width:90%
 }
 .content p {
     color: var(--light-gray);
@@ -75,11 +99,15 @@
     
     display:flex;
     background-color: var(--dark-green);
+    width:50%;
+    margin-top: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 10px;
     justify-content: center;
+    margin-left:70px
 }
+
 .add-cart {
     
     text-align: center;
@@ -92,4 +120,24 @@
 }
 .change-default {
     text-decoration: none;
+}
+@media only screen and (min-width: 768px) {
+    .component {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        height: 57vh;
+        max-width: 700px;
+    }
+     .image  {
+        background: url("../images/image-product-desktop.jpg");
+        background-position: center;
+        background-size: cover;
+        height:100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+  
 }
